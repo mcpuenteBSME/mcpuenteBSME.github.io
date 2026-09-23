@@ -303,6 +303,10 @@ h1 em { color: var(--accent); font-style: normal; }
 .image-large, .plan-primary { grid-column: 1 / -1; }
 .project-media-grid .image-large { height: clamp(280px, 31vw, 500px); }
 .project-media-grid .image-button:not(.image-large) { height: clamp(145px, 15vw, 230px); }
+.project-media-grid .gear-overview { height: clamp(250px, 25vw, 410px); background: #f5f7fb; }
+.project-media-grid .gear-overview img { object-fit: contain; }
+.project-media-grid .bearing-overview { grid-column: 1 / -1; height: clamp(185px, 23vw, 320px); background: #fff; }
+.project-media-grid .bearing-overview img { object-fit: contain; }
 .plan-stack .plan-primary { height: clamp(280px, 30vw, 480px); }
 .plan-stack .image-button:not(.plan-primary) { height: clamp(160px, 17vw, 250px); }
 .controls-media .image-large { height: clamp(270px, 29vw, 460px); }
@@ -350,6 +354,9 @@ h1 em { color: var(--accent); font-style: normal; }
 .smokey-gallery .image-button { height: clamp(180px, 22vw, 330px); }
 .smokey-gallery .image-button img { object-position: center; }
 .smokey-gallery .image-button:last-child img { object-position: center 56%; }
+.smokey-work-list { position: relative; z-index: 2; grid-column: 1 / -1; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .6rem 2rem; margin: 0; padding: 1.2rem 0 0; list-style: none; border-top: 1px solid rgba(8, 10, 13, .16); }
+.smokey-work-list li { color: #38434d; font-size: .88rem; line-height: 1.55; }
+.smokey-work-list strong { display: block; margin-bottom: .2rem; color: var(--ink); font-size: .7rem; letter-spacing: .08em; text-transform: uppercase; }
 
 .about-section { display: grid; grid-template-columns: .9fr 1.1fr; gap: clamp(3rem, 9vw, 9rem); border-top: 1px solid var(--line); }
 .about-intro { position: sticky; top: calc(var(--header) + 3rem); align-self: start; }
@@ -419,6 +426,7 @@ footer p { margin: 0; }
   .hands-on { grid-template-columns: 1fr; gap: 1.2rem; }
   .smokey-gallery { grid-template-columns: 1fr; }
   .smokey-gallery .image-button { height: 300px; }
+  .smokey-work-list { grid-template-columns: 1fr; }
   .capability-grid { grid-template-columns: 1fr; }
   .capability-grid > div { min-height: 230px; }
   .contact-section { grid-template-columns: 1fr; }

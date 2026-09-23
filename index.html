@@ -14,7 +14,7 @@
       type="image/svg+xml"
       href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23080a0d'/%3E%3Cpath d='M14 46V18h8l10 16 10-16h8v28h-8V31L32 46 22 31v15z' fill='%23ffb000'/%3E%3C/svg%3E"
     />
-    <link rel="stylesheet" href="styles.css?v=20260923-media" />
+    <link rel="stylesheet" href="styles.css?v=20260923-projects" />
     <script src="script.js" defer></script>
   </head>
   <body>
@@ -41,10 +41,11 @@
         <div class="hero-grid" aria-hidden="true"></div>
         <div class="hero-copy reveal">
           <p class="eyebrow"><span class="status-dot"></span> Mechanical Engineering · San Antonio, TX</p>
-          <h1 id="hero-title">I turn design intent into <em>working systems.</em></h1>
+          <h1 id="hero-title">Learning by designing, <em>building, and testing.</em></h1>
           <p class="hero-lede">
-            Mechanical engineering student focused on machine design, analysis, manufacturing,
-            controls, and coordinated building systems—from an 82 hp gearbox to permit-set plumbing revisions.
+            I’m a mechanical engineering student at UTSA, grateful for the chance to learn from
+            professors, teammates, and the people I work alongside. I bring curiosity and care to
+            machine design, analysis, controls, and building systems—and I enjoy seeing the work through.
           </p>
           <div class="hero-actions">
             <a class="button button-primary" href="#work">View selected work <span aria-hidden="true">↓</span></a>
@@ -100,13 +101,14 @@
             <p class="project-number">01</p>
             <h3>Two-Stage Spur-Gear Speed Reducer</h3>
             <p class="project-summary">
-              Designed an 82 hp reducer that converts 1,200 rpm input to 100 rpm output through
-              4:1 and 3:1 stages, connecting analytical sizing directly to the finished assembly.
+              On a team, designed a two-stage reducer to transmit 82 hp and step 1,200 rpm down
+              to 100 rpm. We carried the 12:1 requirement through gear sizing, shaft and bearing
+              selection, verification, and a complete SolidWorks assembly.
             </p>
             <ul class="project-points">
-              <li>AGMA bending and contact analysis</li>
-              <li>V-M-T loading, Modified Goodman fatigue, bearings, and keys</li>
-              <li>MATLAB beam-element FEM and SolidWorks shaft drawings</li>
+              <li>Checked gear bending and contact stress against AGMA criteria; critical contact fatigue FOS: 1.24</li>
+              <li>Sized AISI 1045 cold-drawn steel shafts and ANSI keys; minimum shaft FOS: 1.37</li>
+              <li>Selected SKF bearings from reaction loads and required dynamic ratings; used FEM to check intermediate-shaft deflection and slope</li>
             </ul>
             <div class="metric-row" aria-label="Speed reducer results">
               <div><strong>82 hp</strong><span>input power</span></div>
@@ -115,9 +117,9 @@
             </div>
           </div>
           <div class="project-media project-media-grid">
-            <button class="image-button image-large" type="button" data-image="assets/gear-assembly.webp" data-caption="Complete two-stage reducer assembly">
-              <img src="assets/gear-assembly.webp" alt="SolidWorks rendering of the complete two-stage reducer assembly" loading="lazy" />
-              <span>Assembly / SolidWorks</span>
+            <button class="image-button image-large gear-overview" type="button" data-image="assets/gear-train.png" data-caption="Two-stage gear train: SolidWorks views and section">
+              <img src="assets/gear-train.png" alt="Three SolidWorks views of the two-stage gear train, including a section view" loading="lazy" />
+              <span>Gear train / SolidWorks</span>
             </button>
             <button class="image-button" type="button" data-image="assets/gear-fem.webp" data-caption="Beam-element verification and deformation review">
               <img src="assets/gear-fem.webp" alt="Finite element result used to verify the speed reducer design" loading="lazy" />
@@ -126,6 +128,10 @@
             <button class="image-button" type="button" data-image="assets/shaft-design.webp" data-caption="Stepped shaft design and dimensioned geometry">
               <img src="assets/shaft-design.webp" alt="Dimensioned stepped shaft drawing" loading="lazy" />
               <span>Detail / Shaft design</span>
+            </button>
+            <button class="image-button bearing-overview" type="button" data-image="assets/gear-bearings.png" data-caption="Bearing selection: NJ307 input, 22211 E intermediate, 6315 output; click to read the full slide">
+              <img src="assets/gear-bearings.png" alt="Bearing selection slide with load-rating method, shaft-to-bearing table, and SKF bearing models" loading="lazy" />
+              <span>Selection / SKF bearings</span>
             </button>
           </div>
         </article>
@@ -154,12 +160,12 @@
               <img src="assets/masjid-sanitary.webp" alt="Sanitary plan showing Delta 1 plumbing revisions" loading="lazy" />
               <span>P.3 / Sanitary plan</span>
             </button>
-            <button class="image-button" type="button" data-image="assets/masjid-domestic.webp" data-caption="P.5 domestic water plan — Delta 1 revisions">
-              <img src="assets/masjid-domestic.webp" alt="Domestic water plan showing Delta 1 revisions" loading="lazy" />
+            <button class="image-button" type="button" data-image="assets/masjid-domestic-new.png" data-caption="P.5 domestic water plan — Delta 1 revisions">
+              <img src="assets/masjid-domestic-new.png" alt="Domestic water plan showing Delta 1 revisions at the restrooms, warming kitchen, storage, and mechanical rooms" loading="lazy" />
               <span>P.5 / Domestic water</span>
             </button>
-            <button class="image-button" type="button" data-image="assets/masjid-risers.webp" data-caption="P.8 coordinated plumbing risers">
-              <img src="assets/masjid-risers.webp" alt="Coordinated plumbing riser diagrams" loading="lazy" />
+            <button class="image-button" type="button" data-image="assets/masjid-risers-new.png" data-caption="P.8 coordinated domestic-water risers — Delta 1 revisions">
+              <img src="assets/masjid-risers-new.png" alt="Domestic water riser diagrams with Delta 1 revision clouds" loading="lazy" />
               <span>P.8 / Riser diagrams</span>
             </button>
           </div>
@@ -323,10 +329,16 @@
             <h3>Smokey · 1994 Ford F-150</h3>
           </div>
           <p>
-            Brought my non-running truck back onto the road through fuel, ignition, starting,
-            electrical, and mechanical troubleshooting and component replacement. The photos
-            show the work in progress and how Smokey looks today.
+            Smokey has taught me to diagnose carefully, learn as I go, and keep working when a fix
+            takes more than one try. I’ve worked through fuel, ignition, starting, and wiring issues
+            while restoring this 1994 F-150 with help from family and a lot of hands-on practice.
           </p>
+          <ul class="smokey-work-list" aria-label="Smokey restoration work">
+            <li><strong>Fuel + intake</strong> Replaced both fuel tanks, front and rear pumps, injectors, and throttle body; cleaned the fuel rail and intake manifold.</li>
+            <li><strong>Starting + electrical</strong> Replaced the battery, starter, and starter solenoid; soldered the injector connection wiring.</li>
+            <li><strong>Ignition + sensors</strong> Installed new spark plugs and a MAP sensor; replaced the power-steering fluid reservoir.</li>
+            <li><strong>Access + problem solving</strong> Used a tractor and crossed ratchet straps to lift the bed for access to the fuel system.</li>
+          </ul>
           <div class="smokey-gallery" aria-label="Smokey restoration photo gallery">
             <button class="image-button" type="button" data-image="assets/smokey-before.jpeg" data-caption="Smokey during disassembly and body work">
               <img src="assets/smokey-before.jpeg" alt="Smokey with the truck bed removed during restoration work" loading="lazy" />
@@ -350,9 +362,10 @@
           <p class="section-index">03 / About + capability</p>
           <h2 id="about-title">Analytical enough to verify it. Practical enough to build it.</h2>
           <p>
-            Michael is pursuing a B.S. in Mechanical Engineering at The University of Texas at San Antonio,
-            expected Fall 2027. His work combines structured analysis, clear technical documentation,
-            iterative CAD, and hands-on problem solving.
+            I’m pursuing a B.S. in Mechanical Engineering at The University of Texas at San Antonio,
+            expected Fall 2027. I’m grateful to learn this field through coursework, research,
+            industry experience, and people willing to share their knowledge. I aim to bring sound
+            analysis, clear documentation, and a willingness to learn to every project.
           </p>
         </div>
 
@@ -385,8 +398,9 @@
           <p class="section-index">04 / Contact</p>
           <h2 id="contact-title">Let’s put good engineering to work.</h2>
           <p>
-            Open to internships and early-career opportunities in mechanical design,
-            manufacturing, test, aerospace, and systems engineering.
+            I’m looking for internships and early-career opportunities in mechanical design,
+            manufacturing, test, aerospace, and building systems. I’d be glad to learn about your work
+            and contribute wherever I can.
           </p>
         </div>
         <div class="contact-actions reveal">
