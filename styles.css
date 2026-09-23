@@ -306,7 +306,12 @@ h1 em { color: var(--accent); font-style: normal; }
 .plan-stack .plan-primary { height: clamp(280px, 30vw, 480px); }
 .plan-stack .image-button:not(.plan-primary) { height: clamp(160px, 17vw, 250px); }
 .controls-media .image-large { height: clamp(270px, 29vw, 460px); }
-.controls-media .image-button:not(.image-large) { grid-column: 1 / -1; height: clamp(200px, 21vw, 310px); }
+.controls-media .image-button:not(.image-large) { height: clamp(200px, 21vw, 310px); }
+.controls-media .image-button:last-child { grid-column: 1 / -1; height: clamp(200px, 21vw, 310px); }
+.project-video { position: relative; min-width: 0; overflow: hidden; background: var(--panel); border: 1px solid var(--line); }
+.project-video video { display: block; width: 100%; height: 100%; object-fit: contain; background: #0b0d12; }
+.project-video > span { position: absolute; left: .7rem; top: .7rem; padding: .4rem .55rem; color: var(--paper); background: rgba(8, 10, 13, .84); font-size: .63rem; font-weight: 750; letter-spacing: .1em; text-transform: uppercase; pointer-events: none; }
+.motor-video { height: clamp(200px, 21vw, 310px); }
 
 .study-heading { margin: 1rem 0 2rem; }
 .study-heading h3 { max-width: 680px; font-size: clamp(2rem, 4vw, 3.6rem); }
@@ -330,11 +335,21 @@ h1 em { color: var(--accent); font-style: normal; }
 .experience-card .tool-line { margin-top: auto; padding-top: 1rem; }
 .privacy-note { margin: .5rem 0; }
 
-.hands-on { position: relative; margin-top: 1rem; padding: clamp(1.7rem, 4vw, 3rem); display: grid; grid-template-columns: .8fr 1.2fr; gap: 3rem; align-items: center; overflow: hidden; background: var(--paper); color: var(--ink); }
+.markup-feature { display: grid; grid-template-columns: 1fr 1.15fr; gap: clamp(1.5rem, 5vw, 5rem); align-items: center; margin-top: 1rem; padding: clamp(1.7rem, 4vw, 3rem); background: var(--panel); border: 1px solid var(--line); }
+.markup-copy h3 { margin: 1rem 0; font-size: clamp(2rem, 4vw, 3.7rem); line-height: 1.08; }
+.markup-copy > p:not(.section-index):not(.tool-line) { max-width: 570px; color: var(--muted); }
+.markup-video { height: clamp(300px, 38vw, 520px); }
+.markup-video video { object-fit: contain; }
+
+.hands-on { position: relative; margin-top: 1rem; padding: clamp(1.7rem, 4vw, 3rem); display: grid; grid-template-columns: .8fr 1.2fr; gap: 1.5rem 3rem; align-items: center; overflow: hidden; background: var(--paper); color: var(--ink); }
 .hands-on h3 { margin: 0; font-size: clamp(2rem, 4vw, 3.8rem); }
 .hands-on > p { position: relative; z-index: 2; max-width: 650px; margin: 0; color: #38434d; }
 .hands-on .section-index { color: #9a6500; }
 .hands-on-mark { position: absolute; right: -1rem; bottom: -2.9rem; color: rgba(8, 10, 13, .06); font-size: 9rem; font-weight: 950; letter-spacing: -.08em; }
+.smokey-gallery { position: relative; z-index: 2; grid-column: 1 / -1; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .8rem; }
+.smokey-gallery .image-button { height: clamp(180px, 22vw, 330px); }
+.smokey-gallery .image-button img { object-position: center; }
+.smokey-gallery .image-button:last-child img { object-position: center 56%; }
 
 .about-section { display: grid; grid-template-columns: .9fr 1.1fr; gap: clamp(3rem, 9vw, 9rem); border-top: 1px solid var(--line); }
 .about-intro { position: sticky; top: calc(var(--header) + 3rem); align-self: start; }
@@ -394,11 +409,16 @@ footer p { margin: 0; }
   .hero-stats dd { text-align: right; }
   .hero-visual figcaption { flex-direction: column; }
   .project-media-grid, .plan-stack, .controls-media { grid-template-columns: 1fr; }
-  .image-large, .plan-primary, .controls-media .image-button:not(.image-large) { grid-column: 1; }
+  .image-large, .plan-primary, .controls-media .image-button:not(.image-large), .controls-media .image-button:last-child { grid-column: 1; }
+  .motor-video { height: 320px; }
   .project-media-grid .image-button:not(.image-large), .plan-stack .image-button:not(.plan-primary) { height: 220px; }
   .study-grid { grid-template-columns: 1fr; }
   .split-images .study-image { height: 250px; }
+  .markup-feature { grid-template-columns: 1fr; }
+  .markup-video { height: 410px; }
   .hands-on { grid-template-columns: 1fr; gap: 1.2rem; }
+  .smokey-gallery { grid-template-columns: 1fr; }
+  .smokey-gallery .image-button { height: 300px; }
   .capability-grid { grid-template-columns: 1fr; }
   .capability-grid > div { min-height: 230px; }
   .contact-section { grid-template-columns: 1fr; }
