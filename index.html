@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#080a0d" />
+    <meta
+      name="description"
+      content="Mechanical engineering portfolio of Michael C. Puente: machine design, CAD, analysis, controls, MEP coordination, and hands-on diagnostics."
+    />
+    <title>Michael C. Puente | Mechanical Engineering</title>
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23080a0d'/%3E%3Cpath d='M14 46V18h8l10 16 10-16h8v28h-8V31L32 46 22 31v15z' fill='%23ffb000'/%3E%3C/svg%3E"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header" aria-label="Primary navigation">
+      <a class="brand" href="#top" aria-label="Michael Puente, home">
+        <span class="brand-mark">MP</span>
+        <span class="brand-name">Michael C. Puente</span>
+      </a>
+      <nav class="nav-links" aria-label="Portfolio sections">
+        <a href="#work">Work</a>
+        <a href="#experience">Experience</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="header-cta" href="Michael_Puente_Engineering_Portfolio.pdf" download>
+        Portfolio PDF <span aria-hidden="true">↗</span>
+      </a>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="top" aria-labelledby="hero-title">
+        <div class="hero-grid" aria-hidden="true"></div>
+        <div class="hero-copy reveal">
+          <p class="eyebrow"><span class="status-dot"></span> Mechanical Engineering · San Antonio, TX</p>
+          <h1 id="hero-title">I turn design intent into <em>working systems.</em></h1>
+          <p class="hero-lede">
+            Mechanical engineering student focused on machine design, analysis, manufacturing,
+            controls, and coordinated building systems—from an 82 hp gearbox to permit-set plumbing revisions.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#work">View selected work <span aria-hidden="true">↓</span></a>
+            <a class="button button-secondary" href="Michael_Puente_Resume.pdf" download>Download résumé</a>
+          </div>
+          <dl class="hero-stats" aria-label="Portfolio highlights">
+            <div>
+              <dt>12:1</dt>
+              <dd>Gear reduction</dd>
+            </div>
+            <div>
+              <dt>&lt;0.001 in</dt>
+              <dd>Max shaft deflection</dd>
+            </div>
+            <div>
+              <dt>2027</dt>
+              <dd>Expected B.S.M.E.</dd>
+            </div>
+          </dl>
+        </div>
+
+        <figure class="hero-visual reveal">
+          <div class="figure-frame figure-frame-hero">
+            <img src="assets/gear-assembly.webp" alt="SolidWorks assembly of a two-stage spur-gear speed reducer" />
+            <span class="corner corner-tl" aria-hidden="true"></span>
+            <span class="corner corner-br" aria-hidden="true"></span>
+          </div>
+          <figcaption>
+            <span>01 / Power transmission</span>
+            <span>SolidWorks · AGMA · MATLAB</span>
+          </figcaption>
+        </figure>
+      </section>
+
+      <section class="section work-section" id="work" aria-labelledby="work-title">
+        <div class="section-heading reveal">
+          <p class="section-index">01 / Selected work</p>
+          <h2 id="work-title">Engineering across the whole chain.</h2>
+          <p>Model the geometry. Check the loads. Document the change. Test what actually happens.</p>
+        </div>
+
+        <article class="project project-feature reveal" id="gearbox">
+          <div class="project-copy">
+            <div class="project-meta">
+              <span>Machine design</span>
+              <span>Team engineering project</span>
+            </div>
+            <p class="project-number">01</p>
+            <h3>Two-Stage Spur-Gear Speed Reducer</h3>
+            <p class="project-summary">
+              Designed an 82 hp reducer that converts 1,200 rpm input to 100 rpm output through
+              4:1 and 3:1 stages, connecting analytical sizing directly to the finished assembly.
+            </p>
+            <ul class="project-points">
+              <li>AGMA bending and contact analysis</li>
+              <li>V-M-T loading, Modified Goodman fatigue, bearings, and keys</li>
+              <li>MATLAB beam-element FEM and SolidWorks shaft drawings</li>
+            </ul>
+            <div class="metric-row" aria-label="Speed reducer results">
+              <div><strong>82 hp</strong><span>input power</span></div>
+              <div><strong>1.24</strong><span>critical contact FOS</span></div>
+              <div><strong>≥1.37</strong><span>minimum shaft FOS</span></div>
+            </div>
+          </div>
+          <div class="project-media project-media-grid">
+            <button class="image-button image-large" type="button" data-image="assets/gear-assembly.webp" data-caption="Complete two-stage reducer assembly">
+              <img src="assets/gear-assembly.webp" alt="SolidWorks rendering of the complete two-stage reducer assembly" loading="lazy" />
+              <span>Assembly / SolidWorks</span>
+            </button>
+            <button class="image-button" type="button" data-image="assets/gear-fem.webp" data-caption="Beam-element verification and deformation review">
+              <img src="assets/gear-fem.webp" alt="Finite element result used to verify the speed reducer design" loading="lazy" />
+              <span>Verification / MATLAB FEM</span>
+            </button>
+            <button class="image-button" type="button" data-image="assets/shaft-design.webp" data-caption="Stepped shaft design and dimensioned geometry">
+              <img src="assets/shaft-design.webp" alt="Dimensioned stepped shaft drawing" loading="lazy" />
+              <span>Detail / Shaft design</span>
+            </button>
+          </div>
+        </article>
+
+        <article class="project project-feature project-reverse reveal" id="masjid">
+          <div class="project-copy">
+            <div class="project-meta">
+              <span>AutoCAD plumbing redesign</span>
+              <span>Approved for portfolio use</span>
+            </div>
+            <p class="project-number">02</p>
+            <h3>Masjid Al-Ekhlas Permit Revision</h3>
+            <p class="project-summary">
+              Architectural floor-plan changes required new fixtures, relocated equipment,
+              revised routing, and removal of obsolete work across the P.3–P.9 permit set.
+            </p>
+            <ul class="project-points">
+              <li>Added sanitary, vent, domestic-water, and tempered-water-return connections</li>
+              <li>Relocated EWH-3 and a floor drain; added HWRP-2 and circulation routing</li>
+              <li>Coordinated plans, details, risers, schedules, tags, and permit-response notes</li>
+            </ul>
+            <p class="scope-note"><strong>Authorship:</strong> Every revision cloud tagged Δ1 identifies Michael’s design and documentation work.</p>
+          </div>
+          <div class="project-media plan-stack">
+            <button class="image-button plan-primary" type="button" data-image="assets/masjid-sanitary.webp" data-caption="P.3 sanitary plan — Delta 1 revisions">
+              <img src="assets/masjid-sanitary.webp" alt="Sanitary plan showing Delta 1 plumbing revisions" loading="lazy" />
+              <span>P.3 / Sanitary plan</span>
+            </button>
+            <button class="image-button" type="button" data-image="assets/masjid-domestic.webp" data-caption="P.5 domestic water plan — Delta 1 revisions">
+              <img src="assets/masjid-domestic.webp" alt="Domestic water plan showing Delta 1 revisions" loading="lazy" />
+              <span>P.5 / Domestic water</span>
+            </button>
+            <button class="image-button" type="button" data-image="assets/masjid-risers.webp" data-caption="P.8 coordinated plumbing risers">
+              <img src="assets/masjid-risers.webp" alt="Coordinated plumbing riser diagrams" loading="lazy" />
+              <span>P.8 / Riser diagrams</span>
+            </button>
+          </div>
+        </article>
+
+        <article class="project project-feature reveal" id="controls">
+          <div class="project-copy">
+            <div class="project-meta">
+              <span>Instrumentation + controls</span>
+              <span>Team laboratory project</span>
+            </div>
+            <p class="project-number">03</p>
+            <h3>Arduino DC Motor Speed Control</h3>
+            <p class="project-summary">
+              Built and tested a PWM speed-control system using an Arduino Uno, 2N2222 transistor,
+              flyback diode, potentiometer input, DC motor, and LCD feedback.
+            </p>
+            <ul class="project-points">
+              <li>Collected four trials per operating point</li>
+              <li>Measured a mean speed range of 743.6–8,225 rpm</li>
+              <li>Identified the low-voltage switching limit and recommended an L293D driver</li>
+            </ul>
+            <div class="metric-row two-up" aria-label="Motor control results">
+              <div><strong>R² 0.9415</strong><span>voltage–speed relationship</span></div>
+              <div><strong>4×</strong><span>trials per setpoint</span></div>
+            </div>
+          </div>
+          <div class="project-media controls-media">
+            <button class="image-button image-large" type="button" data-image="assets/arduino-test.webp" data-caption="Arduino motor-control test setup">
+              <img src="assets/arduino-test.webp" alt="Arduino DC motor speed-control laboratory setup" loading="lazy" />
+              <span>Build / Test setup</span>
+            </button>
+            <button class="image-button" type="button" data-image="assets/arduino-chart.webp" data-caption="Measured voltage and speed relationship">
+              <img src="assets/arduino-chart.webp" alt="Chart showing the measured motor speed response" loading="lazy" />
+              <span>Result / Experimental data</span>
+            </button>
+          </div>
+        </article>
+
+        <div class="study-heading reveal">
+          <p class="section-index">Design studies</p>
+          <h3>Practice with the process visible.</h3>
+        </div>
+        <div class="study-grid">
+          <article class="study-card reveal">
+            <button class="study-image image-button" type="button" data-image="assets/heat-exchanger.webp" data-caption="Shell-and-tube heat exchanger CAD study">
+              <img src="assets/heat-exchanger.webp" alt="Cutaway SolidWorks model of a shell-and-tube heat exchanger" loading="lazy" />
+            </button>
+            <div class="study-copy">
+              <div class="project-meta"><span>SolidWorks assembly practice</span></div>
+              <h4>Shell-and-Tube Heat Exchanger</h4>
+              <p>
+                Tutorial-guided model. Independently identified and corrected a configuration error
+                so the shell-side and tube-side flow regions remained separate.
+              </p>
+              <p class="tool-line">Multi-part modeling · mates · patterns · section review</p>
+            </div>
+          </article>
+
+          <article class="study-card reveal">
+            <div class="split-images">
+              <button class="study-image image-button" type="button" data-image="assets/jet-casing.webp" data-caption="Jet engine rear casing — exterior view">
+                <img src="assets/jet-casing.webp" alt="Exterior SolidWorks view of a jet engine rear casing" loading="lazy" />
+              </button>
+              <button class="study-image image-button" type="button" data-image="assets/jet-casing-section.webp" data-caption="Jet engine rear casing — section view">
+                <img src="assets/jet-casing-section.webp" alt="Section view of the modeled jet engine rear casing" loading="lazy" />
+              </button>
+            </div>
+            <div class="study-copy">
+              <div class="project-meta"><span>Work in progress</span><span>Single component</span></div>
+              <h4>Jet Engine Rear Casing</h4>
+              <p>
+                CAD exercise translating complex rotational and patterned geometry into a
+                manufacturable-looking solid—not presented as a complete engine assembly.
+              </p>
+              <p class="tool-line">Revolve · sweep · cut-extrude · fillets · circular pattern</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section experience-section" id="experience" aria-labelledby="experience-title">
+        <div class="section-heading reveal">
+          <p class="section-index">02 / Applied experience</p>
+          <h2 id="experience-title">Engineering beyond the assignment.</h2>
+          <p>Research, commercial systems, equipment handling, and hands-on diagnostics.</p>
+        </div>
+
+        <div class="experience-grid">
+          <article class="experience-card reveal">
+            <span class="experience-code">RESEARCH / 01</span>
+            <h3>Hypersonic CFD Research</h3>
+            <p class="experience-role">Undergraduate Researcher · UTSA Klesse Program</p>
+            <p>
+              Ran OpenFOAM simulations of Mach 6 turbulent boundary-layer flow over flat-plate and
+              three-dimensional cavity geometries. Built meshes and boundary conditions, executed
+              parallel jobs on TACC and ARC systems, and interpreted results in ParaView.
+            </p>
+            <p class="tool-line">OpenFOAM · ParaView · Linux · HPC</p>
+          </article>
+
+          <article class="experience-card reveal">
+            <span class="experience-code">INDUSTRY / 02</span>
+            <h3>Commercial MEP Preconstruction</h3>
+            <p class="experience-role">Mechanical Engineering Intern · Sur Texas LLC</p>
+            <p>
+              Reviews HVAC and plumbing bid drawings, completes equipment and material takeoffs,
+              tracks revisions and scope changes, and supports plan and schedule updates under PE review.
+            </p>
+            <p class="privacy-note">Project-identifying drawings are intentionally omitted.</p>
+            <p class="tool-line">Bluebeam Revu · AutoCAD/Revit · Excel</p>
+          </article>
+
+          <article class="experience-card reveal">
+            <span class="experience-code">FIELD / 03</span>
+            <h3>HVAC Equipment + Logistics</h3>
+            <p class="experience-role">Warehouse Associate · Texas Air Products</p>
+            <p>
+              Receives, verifies, identifies, stages, and loads commercial HVAC equipment and
+              components while building practical familiarity with controls, dampers, VFDs, curbs,
+              air-distribution products, and accessories.
+            </p>
+            <p class="tool-line">Equipment verification · contractor support · technical identification</p>
+          </article>
+        </div>
+
+        <aside class="hands-on reveal" aria-label="Personal mechanical restoration project">
+          <div>
+            <p class="section-index">Hands-on project</p>
+            <h3>1994 Ford F-150 Restoration</h3>
+          </div>
+          <p>
+            Restored a non-running truck through systematic fuel, ignition, starting, electrical,
+            and mechanical diagnostics, troubleshooting, and component replacement.
+          </p>
+          <span class="hands-on-mark" aria-hidden="true">OBS</span>
+        </aside>
+      </section>
+
+      <section class="section about-section" id="about" aria-labelledby="about-title">
+        <div class="about-intro reveal">
+          <p class="section-index">03 / About + capability</p>
+          <h2 id="about-title">Analytical enough to verify it. Practical enough to build it.</h2>
+          <p>
+            Michael is pursuing a B.S. in Mechanical Engineering at The University of Texas at San Antonio,
+            expected Fall 2027. His work combines structured analysis, clear technical documentation,
+            iterative CAD, and hands-on problem solving.
+          </p>
+        </div>
+
+        <div class="capability-grid reveal">
+          <div>
+            <span>01</span>
+            <h3>Mechanical design</h3>
+            <p>SolidWorks, AGMA analysis, shaft/bearing/key design, V-M-T loading, fatigue analysis</p>
+          </div>
+          <div>
+            <span>02</span>
+            <h3>Analysis + computation</h3>
+            <p>MATLAB, Simulink, Python/Jupyter, FEM, OpenFOAM, ParaView, numerical methods</p>
+          </div>
+          <div>
+            <span>03</span>
+            <h3>Drawings + coordination</h3>
+            <p>AutoCAD, Revit, Bluebeam Revu, drawing review, takeoffs, revision tracking</p>
+          </div>
+          <div>
+            <span>04</span>
+            <h3>Shop + field</h3>
+            <p>Measurement, equipment verification, calipers, multimeters, hand and power tools</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact-section" id="contact" aria-labelledby="contact-title">
+        <div class="contact-copy reveal">
+          <p class="section-index">04 / Contact</p>
+          <h2 id="contact-title">Let’s put good engineering to work.</h2>
+          <p>
+            Open to internships and early-career opportunities in mechanical design,
+            manufacturing, test, aerospace, and systems engineering.
+          </p>
+        </div>
+        <div class="contact-actions reveal">
+          <a href="mailto:mpuente02@icloud.com">mpuente02@icloud.com <span aria-hidden="true">↗</span></a>
+          <a href="tel:+12105487189">(210) 548-7189 <span aria-hidden="true">↗</span></a>
+          <a href="Michael_Puente_Engineering_Portfolio.pdf" download>Download portfolio <span aria-hidden="true">↓</span></a>
+          <a href="Michael_Puente_Resume.pdf" download>Download résumé <span aria-hidden="true">↓</span></a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Michael C. Puente · Mechanical Engineering Portfolio</p>
+      <p>Designed for clarity. Built around the work.</p>
+    </footer>
+
+    <dialog class="lightbox" aria-labelledby="lightbox-caption">
+      <button class="lightbox-close" type="button" aria-label="Close image">×</button>
+      <img src="" alt="" />
+      <p id="lightbox-caption"></p>
+    </dialog>
+  </body>
+</html>
