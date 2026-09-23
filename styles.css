@@ -236,7 +236,13 @@ h1 em { color: var(--accent); font-style: normal; }
   overflow: hidden;
 }
 .figure-frame-hero { padding: clamp(1rem, 3vw, 2.25rem); transform: perspective(900px) rotateY(-5deg) rotateX(2deg); box-shadow: 35px 45px 100px rgba(0, 0, 0, .38); }
-.figure-frame-hero img { width: 100%; aspect-ratio: 1.2; object-fit: contain; filter: saturate(.78) contrast(1.08); }
+.figure-frame-hero img {
+  width: 100%;
+  aspect-ratio: 1.066;
+  object-fit: cover;
+  object-position: center;
+  filter: saturate(.92) contrast(1.04);
+}
 .corner { position: absolute; width: 2rem; height: 2rem; border-color: var(--accent); }
 .corner-tl { left: .8rem; top: .8rem; border-left: 1px solid; border-top: 1px solid; }
 .corner-br { right: .8rem; bottom: .8rem; border-right: 1px solid; border-bottom: 1px solid; }
