@@ -497,3 +497,13 @@ footer p { margin: 0; }
 @media(max-width:480px) {
   .about-section > .capability-grid { grid-template-columns:1fr; }
 }
+
+/* Preserve the full focused setup and keep component photos easy to browse. */
+.controls-media .image-large img { aspect-ratio:810/1050; object-fit:contain; }
+.controls-media .image-button:hover img,.controls-media .image-button:focus-visible img {transform:none;filter:none;}
+.motor-parts {grid-column:1/-1;border:1px solid var(--line);padding:1.2rem;}
+.motor-parts summary {cursor:pointer;font-weight:600;color:var(--text);}
+.motor-parts-grid {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;margin-top:1.2rem;}
+.motor-parts-grid .image-button img {aspect-ratio:1;object-fit:contain;background:#111;}
+.motor-parts-grid .image-button span {position:static;display:block;padding:.7rem;font-size:.75rem;}
+@media(max-width:600px){.motor-parts-grid{grid-template-columns:repeat(2,minmax(0,1fr));}}
