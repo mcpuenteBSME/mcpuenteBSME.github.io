@@ -484,6 +484,7 @@ footer p { margin: 0; }
 .about-story h3 { margin: 0 0 1rem; font-size: 1.3rem; }
 .about-story p { color: #bac4cf; line-height: 1.8; margin: .8rem 0; }
 .about-section { row-gap:2.5rem; }
+.about-section > .about-intro { position:static; }
 .about-section > .capability-grid { grid-column:2;grid-row:1; }
 @media(max-width:1000px) {
   .about-section { grid-template-columns:1fr; }
