@@ -14,7 +14,7 @@
       type="image/svg+xml"
       href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23080a0d'/%3E%3Cpath d='M14 46V18h8l10 16 10-16h8v28h-8V31L32 46 22 31v15z' fill='%23ffb000'/%3E%3C/svg%3E"
     />
-    <link rel="stylesheet" href="styles.css?v=20260925-research" />
+    <link rel="stylesheet" href="styles.css?v=20260925-research-about" />
     <script src="script.js" defer></script>
   </head>
   <body>
@@ -32,7 +32,7 @@
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
       </nav>
-      <a class="header-cta" href="Michael_Puente_Engineering_Portfolio.pdf" download>
+      <a class="header-cta" href="Michael_Puente_Engineering_Portfolio.pdf?v=20260925" download>
         Portfolio PDF <span aria-hidden="true">↗</span>
       </a>
     </header>
@@ -50,7 +50,7 @@
           </p>
           <div class="hero-actions">
             <a class="button button-primary" href="#work">View selected work <span aria-hidden="true">↓</span></a>
-            <a class="button button-secondary" href="Michael_Puente_Resume.pdf" download>Download résumé</a>
+            <a class="button button-secondary" href="Michael_Puente_Resume.pdf?v=20260925" download>Download résumé</a>
           </div>
         </div>
 
@@ -105,10 +105,39 @@
             <p>This work is helping me connect computational results to the aerospace questions behind them: how surface features influence drag, pressure loading, and the flow conditions relevant to heating. The current adiabatic case assumes no heat transfer through the wall; it provides a foundation for understanding the flow rather than a prediction of heat entering an actual vehicle.</p>
           </div>
         </div>
-        <div class="research-gallery reveal">
-          <figure><button class="image-button" type="button" data-image="assets/research-velocity.png" data-caption="Mach 6 flow travels left to right: 790.3 m/s at 43.18 K, where the speed of sound is approximately 131.7 m/s. Red: fast outer flow. Thin lower-velocity band along the plate: developing boundary layer. Faint diagonal: apparent oblique shock."><img src="assets/research-velocity.png" alt="ParaView velocity magnitude view of the Mach 6 flat-plate simulation" loading="lazy" /></button><figcaption><strong>Velocity magnitude · U</strong><span>Mach 6 air flows from left to right over the flat plate along the lower edge. Red represents the fast outer flow, near 790.3 m/s—Mach 6 at the specified 43.18 K freestream temperature, where the speed of sound is about 131.7 m/s. The thin band of lower velocity along the wall shows the boundary layer developing and thickening downstream. Viscosity slows the air near the stationary, no-slip surface, where velocity falls to zero. The faint diagonal feature extending from the leading edge toward the upper right is consistent with an oblique shock and is easier to distinguish in the pressure view.</span><span>Velocity scale: m/s · Simulation time: 0.334706 s</span></figcaption></figure>
-          <figure><button class="image-button" type="button" data-image="assets/research-pressure.png" data-caption="Static pressure, p, in Pa. Dark blue is near freestream pressure; the lighter diagonal band highlights the pressure rise associated with the apparent shock."><img src="assets/research-pressure.png" alt="ParaView pressure field of the Mach 6 flat-plate simulation" loading="lazy" /></button><figcaption><strong>Static pressure · p</strong><span>This view shows static pressure in pascals for the same flow. Dark blue is near the freestream pressure of 443.5 Pa; lighter colors indicate higher pressure. The diagonal pressure-rise band makes the shock structure more visible: air crossing a compression shock experiences a rise in static pressure. Together, the two views show the near-wall slowing of the flow and the pressure changes extending into the flow above it. Shock strength and location still require quantitative checks.</span><span>Pressure scale: Pa · Simulation time: 0.334706 s</span></figcaption></figure>
+        <div class="study-heading reveal" id="research-contours">
+          <p class="section-index">Flow-field visualizations / Mach 6 flat plate</p>
+          <h3>Three views of the same flow.</h3>
+          <p>Flow travels from left to right over the lower boundary. Each plot shows an x–y slice at z = 0.005 m, with the physical proportions preserved. Select any image to read the full-size axes and color scale.</p>
         </div>
+        <div class="research-contour-gallery">
+          <figure class="reveal">
+            <button class="image-button" type="button" data-image="assets/research-mach-contours.png" data-caption="Local Mach number · M — Mach number compares the local flow speed with the local speed of sound. The red outer region is near Mach 6, while the thin band of lower Mach numbers along the plate shows the developing boundary layer. The faint diagonal change rising from the leading edge is consistent with the shock structure seen in the pressure view.">
+              <img src="assets/research-mach-contours.png" alt="Mach-number contours across the flat plate, showing a near-Mach-6 outer flow and lower Mach numbers near the wall" loading="lazy" />
+            </button>
+            <figcaption><strong>Local Mach number · M</strong><p>Mach number compares the local flow speed with the local speed of sound. The red outer region is near Mach 6, while the thin band of lower Mach numbers along the plate shows the developing boundary layer. The faint diagonal change rising from the leading edge is consistent with the shock structure seen in the pressure view.</p><span>Calculated from velocity magnitude and local static temperature, using ideal air with γ = 1.4 and R = 287 J/(kg·K).</span></figcaption>
+          </figure>
+          <figure class="reveal">
+            <button class="image-button" type="button" data-image="assets/research-temperature-contours.png" data-caption="Static temperature · T — The dark outer flow is near the specified freestream temperature of 43.18 K. The warmer band close to the plate shows how gas temperature varies through the near-wall region and along the surface. This is the gas-temperature field; wall heat transfer requires a separate calculation and the appropriate thermal boundary condition.">
+              <img src="assets/research-temperature-contours.png" alt="Static-temperature contours in kelvin, showing a cold outer flow and a warmer region near the plate" loading="lazy" />
+            </button>
+            <figcaption><strong>Static temperature · T</strong><p>The dark outer flow is near the specified freestream temperature of 43.18 K. The warmer band close to the plate shows how gas temperature varies through the near-wall region and along the surface. This is the gas-temperature field; wall heat transfer requires a separate calculation and the appropriate thermal boundary condition.</p><span>Color scale: kelvin · Preliminary field visualization from the exported simulation data.</span></figcaption>
+          </figure>
+          <figure class="reveal">
+            <button class="image-button" type="button" data-image="assets/research-streamwise-contours.png" data-caption="Streamwise velocity · uₓ — This plot shows the x-component of velocity: how fast the air moves along the plate. The red outer flow is near 790.3 m/s—Mach 6 at the specified 43.18 K freestream temperature, where the speed of sound is about 131.7 m/s. The lower-velocity band along the bottom thickens downstream, making boundary-layer growth visible.">
+              <img src="assets/research-streamwise-contours.png" alt="Streamwise-velocity contours in meters per second, showing the slower near-wall region thickening downstream" loading="lazy" />
+            </button>
+            <figcaption><strong>Streamwise velocity · uₓ</strong><p>This plot shows the x-component of velocity: how fast the air moves along the plate. The red outer flow is near 790.3 m/s—Mach 6 at the specified 43.18 K freestream temperature, where the speed of sound is about 131.7 m/s. The lower-velocity band along the bottom thickens downstream, making boundary-layer growth visible.</p><span>Color scale: m/s · Streamwise component uₓ, rather than total velocity magnitude.</span></figcaption>
+          </figure>
+        </div>
+        <details class="contour-notes reveal">
+          <summary>About these contour plots</summary>
+          <p>These plots use the first complete x–y grid from my simulation export. Where boundary coordinates repeat, the first exported record is retained; no smoothing is applied. Boundary values and case setup remain under review as part of the ongoing study. The CSV does not include a time stamp, so these plots are not assigned the time shown in the separate ParaView pressure snapshot.</p>
+        </details>
+        <figure class="research-pressure-view reveal">
+          <button class="image-button" type="button" data-image="assets/research-pressure.png" data-caption="Static pressure, p, in Pa. Dark blue is near freestream pressure; the lighter diagonal band highlights the pressure rise associated with the apparent shock."><img src="assets/research-pressure.png" alt="ParaView pressure field of the Mach 6 flat-plate simulation" loading="lazy" /></button>
+          <figcaption><strong>Pressure perspective · p</strong><p>The ParaView pressure view provides a complementary look at the flat-plate flow. Dark blue is near the freestream pressure of 443.5 Pa; lighter colors indicate higher static pressure. The diagonal pressure-rise band highlights the apparent shock, where compression raises the pressure. Shock strength and location remain subjects for quantitative checks.</p><span>Pressure scale: Pa · ParaView snapshot time: 0.334706 s</span></figcaption>
+        </figure>
         <div class="research-method reveal">
           <div><h3>From flow fields to useful quantities.</h3><p>The post-processing workflow groups exported data into wall-normal profiles, estimates edge conditions, and uses a near-wall velocity fit with Sutherland-law viscosity to estimate wall shear. The resulting plots help me examine boundary-layer growth, local skin friction, and velocity profiles in wall units.</p></div>
           <div><h3>Current progress &amp; next questions</h3><p>The current thickness plot shows growth downstream. I’m using the skin-friction and velocity-profile plots to examine how the solution changes along the plate. My next objective is to develop a rectangular-cavity simulation, using this Mach 6 flat-plate case to guide the setup and provide a baseline for examining how the cavity changes the flow.</p></div>
@@ -307,9 +336,9 @@
             <h3>Hypersonic CFD Research</h3>
             <p class="experience-role">Undergraduate Researcher · UTSA Klesse Program</p>
             <p>
-              Ran OpenFOAM simulations of Mach 6 turbulent boundary-layer flow over flat-plate and
-              three-dimensional cavity geometries. Built meshes and boundary conditions, executed
-              parallel jobs on TACC and ARC systems, and interpreted results in ParaView.
+              Developed experience with OpenFOAM simulations of hypersonic boundary-layer flow.
+              Built meshes and boundary conditions, executed parallel jobs on TACC and ARC systems,
+              and interpreted results in ParaView. I’m continuing this work through my independent study.
             </p>
             <p class="tool-line">OpenFOAM · ParaView · Linux · HPC</p>
             <a class="research-link" href="#research">Explore my ongoing independent study ↗</a>
@@ -406,6 +435,12 @@
           </p>
         </div>
 
+        <div class="about-story reveal">
+          <h3>More about me</h3>
+          <p>Before UTSA, I studied applied physics and played varsity football at Texas Lutheran University. That chapter is an important part of my story alongside the engineering work you see here.</p>
+          <p>My mom and dad are two of my biggest inspirations. Their resilience and work ethic remind me to keep showing up, put care into what I do, and stay willing to learn. I’m grateful for their example as I work toward a future in engineering.</p>
+        </div>
+
         <div class="capability-grid reveal">
           <div>
             <span>01</span>
@@ -443,8 +478,8 @@
         <div class="contact-actions reveal">
           <a href="mailto:mpuente02@icloud.com">mpuente02@icloud.com <span aria-hidden="true">↗</span></a>
           <a href="tel:+12105487189">(210) 548-7189 <span aria-hidden="true">↗</span></a>
-          <a href="Michael_Puente_Engineering_Portfolio.pdf" download>Download portfolio <span aria-hidden="true">↓</span></a>
-          <a href="Michael_Puente_Resume.pdf" download>Download résumé <span aria-hidden="true">↓</span></a>
+          <a href="Michael_Puente_Engineering_Portfolio.pdf?v=20260925" download>Download portfolio <span aria-hidden="true">↓</span></a>
+          <a href="Michael_Puente_Resume.pdf?v=20260925" download>Download résumé <span aria-hidden="true">↓</span></a>
         </div>
       </section>
     </main>

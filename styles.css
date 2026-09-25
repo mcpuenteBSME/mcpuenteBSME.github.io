@@ -451,3 +451,31 @@ footer p { margin: 0; }
 .research-method { display:grid;grid-template-columns:1fr 1fr;gap:3rem; }
 .research-link { color:var(--accent); display:inline-block;margin-top:1rem; }
 @media(max-width:760px){.research-intro,.research-gallery,.research-plots,.research-method { grid-template-columns:1fr;gap:1.5rem; }.research-conditions { padding:1.2rem; }}
+
+/* Full-width contours keep fine near-wall structure and axes legible. */
+#research-contours { scroll-margin-top:calc(var(--header) + 2rem); }
+#research-contours > p:last-child { max-width:78ch;color:#bac4cf;line-height:1.75; }
+.research-contour-gallery { display:grid;gap:2rem;margin:2rem 0; }
+.research-contour-gallery figure { margin:0;min-width:0; }
+.research-contour-gallery .image-button { width:100%;height:auto;display:block;background:#fff; }
+.research-contour-gallery .image-button img { width:100%;height:auto;display:block;object-fit:contain; }
+.research-contour-gallery figcaption,.research-pressure-view figcaption { padding:1rem 0; }
+.research-contour-gallery figcaption strong,.research-pressure-view figcaption strong { font-size:1.1rem; }
+.research-contour-gallery figcaption p,.research-pressure-view figcaption p { color:#bac4cf;line-height:1.75;margin:.6rem 0;max-width:95ch; }
+.research-contour-gallery figcaption span,.research-pressure-view figcaption span { color:#a9b8c6;font-size:.8rem;line-height:1.6; }
+.contour-notes { border-block:1px solid #28313a;padding:1rem 0;color:#bac4cf; }
+.contour-notes summary { cursor:pointer;color:var(--accent);font-size:.85rem; }
+.contour-notes p { max-width:90ch;line-height:1.75;font-size:.85rem; }
+.research-pressure-view { display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:center;margin:2.5rem 0; }
+.research-pressure-view .image-button { width:100%;height:auto;display:block; }
+.research-pressure-view img { width:100%;height:auto;display:block;object-fit:contain; }
+@media(max-width:760px){.research-pressure-view { grid-template-columns:1fr;gap:.5rem; }}
+/* Personal background alongside the engineering work. */
+.about-story {
+  max-width: 78ch;
+  margin: 2rem 0 3rem;
+  padding-left: 1.5rem;
+  border-left: 2px solid var(--accent, #ffb000);
+}
+.about-story h3 { margin: 0 0 1rem; font-size: 1.3rem; }
+.about-story p { color: #bac4cf; line-height: 1.8; margin: .8rem 0; }
