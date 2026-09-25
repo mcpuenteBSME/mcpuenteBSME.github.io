@@ -14,7 +14,7 @@
       type="image/svg+xml"
       href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23080a0d'/%3E%3Cpath d='M14 46V18h8l10 16 10-16h8v28h-8V31L32 46 22 31v15z' fill='%23ffb000'/%3E%3C/svg%3E"
     />
-    <link rel="stylesheet" href="styles.css?v=20260923-cover" />
+    <link rel="stylesheet" href="styles.css?v=20260925-research" />
     <script src="script.js" defer></script>
   </head>
   <body>
@@ -27,6 +27,7 @@
       </a>
       <nav class="nav-links" aria-label="Portfolio sections">
         <a href="#work">Work</a>
+        <a href="#research">Research</a>
         <a href="#experience">Experience</a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
@@ -244,6 +245,42 @@
         </div>
       </section>
 
+      <section class="section research-section" id="research" aria-labelledby="research-title">
+        <div class="section-heading reveal">
+          <p class="section-index">Research / Ongoing independent study</p>
+          <h2 id="research-title">Understanding flow at Mach 6.</h2>
+          <p>Numerical Evaluation of Surface Imperfections in Hypersonic Turbulent Boundary Layers</p>
+        </div>
+        <div class="research-intro reveal">
+          <div>
+            <div class="project-meta"><span>UTSA · Mechanical Engineering</span><span>Work in progress</span></div>
+            <h3>Building a baseline. Learning to question the results.</h3>
+            <p>I’m investigating hypersonic turbulent boundary-layer flow as part of my ongoing independent study. The broader study examines surface imperfections; this stage focuses on a two-dimensional, adiabatic flat plate using unsteady Reynolds-averaged Navier–Stokes (URANS) simulation.</p>
+            <p>My work connects OpenFOAM case setup and simulation with ParaView visualization and MATLAB post-processing. I’m grateful for the faculty guidance behind this experience and the opportunity to develop more careful computational and engineering judgment.</p>
+            <p class="tool-line">OpenFOAM · ParaView · MATLAB · Linux · HPC</p>
+          </div>
+          <aside class="research-conditions" aria-label="Reported freestream conditions">
+            <p class="section-index">Flat-plate case / Freestream inputs</p>
+            <dl><div><dt>Mach number</dt><dd>6</dd></div><div><dt>Velocity</dt><dd>790.3 m/s</dd></div><div><dt>Temperature</dt><dd>43.18 K</dd></div><div><dt>Pressure</dt><dd>443.5 Pa</dd></div><div><dt>Density</dt><dd>0.0358 kg/m³</dd></div></dl>
+            <p>Case inputs reported in my independent-study presentation.</p>
+          </aside>
+        </div>
+        <div class="research-gallery reveal">
+          <figure><button class="image-button" type="button" data-image="assets/research-velocity.png" data-caption="ParaView velocity magnitude view of the Mach 6 flat-plate simulation"><img src="assets/research-velocity.png" alt="ParaView velocity magnitude view of the Mach 6 flat-plate simulation" loading="lazy" /></button><figcaption><strong>Velocity magnitude · U</strong><span>Simulation snapshot · ParaView time: 0.334706 s</span></figcaption></figure>
+          <figure><button class="image-button" type="button" data-image="assets/research-pressure.png" data-caption="ParaView pressure field of the Mach 6 flat-plate simulation"><img src="assets/research-pressure.png" alt="ParaView pressure field of the Mach 6 flat-plate simulation" loading="lazy" /></button><figcaption><strong>Pressure · p</strong><span>Simulation snapshot · ParaView time: 0.334706 s</span></figcaption></figure>
+        </div>
+        <div class="research-method reveal">
+          <div><h3>From flow fields to useful quantities.</h3><p>The post-processing workflow groups exported data into wall-normal profiles, estimates edge conditions, and uses a near-wall velocity fit with Sutherland-law viscosity to estimate wall shear. The resulting plots help me examine boundary-layer growth, local skin friction, and velocity profiles in wall units.</p></div>
+          <div><h3>Current progress &amp; next questions</h3><p>The current thickness plot shows growth downstream. I’m using the skin-friction and velocity-profile plots to examine how the solution changes along the plate. The next focus is checking the baseline and post-processing assumptions before drawing conclusions about surface-imperfection effects.</p></div>
+        </div>
+        <p class="scope-note reveal"><strong>Preliminary analysis:</strong> These are current simulation and post-processing outputs from an ongoing study. Numerical verification and comparison with reference results remain part of the work.</p>
+        <div class="research-plots reveal">
+          <figure><button class="image-button" type="button" data-image="assets/research-figure-1.png" data-caption="Estimated δ₉₉ versus streamwise position — preliminary post-processing"><img src="assets/research-figure-1.png" alt="Estimated δ₉₉ versus streamwise position" loading="lazy" /></button><figcaption><strong>Boundary-layer growth</strong><span>Estimated δ₉₉ versus streamwise position · Select to enlarge</span></figcaption></figure>
+          <figure><button class="image-button" type="button" data-image="assets/research-figure-4.png" data-caption="Estimated Cᶠ versus streamwise position — preliminary post-processing"><img src="assets/research-figure-4.png" alt="Estimated Cᶠ versus streamwise position" loading="lazy" /></button><figcaption><strong>Local skin friction</strong><span>Estimated Cᶠ versus streamwise position · Select to enlarge</span></figcaption></figure>
+          <figure><button class="image-button" type="button" data-image="assets/research-figure-8.png" data-caption="u⁺ versus y⁺ at selected streamwise stations — preliminary post-processing"><img src="assets/research-figure-8.png" alt="u⁺ versus y⁺ at selected streamwise stations" loading="lazy" /></button><figcaption><strong>Velocity in wall units</strong><span>u⁺ versus y⁺ at selected streamwise stations · Select to enlarge</span></figcaption></figure>
+        </div>
+      </section>
+
       <section class="section experience-section" id="experience" aria-labelledby="experience-title">
         <div class="section-heading reveal">
           <p class="section-index">02 / Applied experience</p>
@@ -262,6 +299,7 @@
               parallel jobs on TACC and ARC systems, and interpreted results in ParaView.
             </p>
             <p class="tool-line">OpenFOAM · ParaView · Linux · HPC</p>
+            <a class="research-link" href="#research">Explore my ongoing independent study ↗</a>
           </article>
 
           <article class="experience-card reveal">

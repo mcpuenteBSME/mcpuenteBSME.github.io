@@ -430,3 +430,24 @@ footer p { margin: 0; }
   *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; }
   .reveal { opacity: 1; transform: none; }
 }
+
+/* Ongoing research case study */
+.research-section { border-top: 1px solid #28313a; }
+.research-intro { display:grid; grid-template-columns:1.4fr 1fr; gap:3rem; }
+.research-intro h3,.research-method h3 { font-size:clamp(1.35rem,2.2vw,2rem); line-height:1.2; margin:1.2rem 0; }
+.research-intro p,.research-method p { color:#bac4cf; line-height:1.8; margin-bottom:1rem; }
+.research-conditions { background:#11161c; border:1px solid #28313a; padding:1.8rem; }
+.research-conditions dl { margin:1.5rem 0; }
+.research-conditions dl div { display:flex; justify-content:space-between; gap:1rem; padding:.75rem 0; border-bottom:1px solid #28313a; }
+.research-conditions dt { color:#bac4cf; }.research-conditions dd { margin:0; font-weight:700; }
+.research-conditions > p:last-child { font-size:.8rem; }
+.research-gallery,.research-plots { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:1.5rem; margin:2.5rem 0; }
+.research-plots { grid-template-columns:repeat(3,minmax(0,1fr)); }
+.research-gallery figure,.research-plots figure { margin:0; min-width:0; }
+.research-gallery .image-button,.research-plots .image-button { width:100%; height:auto; aspect-ratio:2.1; background:#111; }
+.research-gallery .image-button img,.research-plots .image-button img { width:100%;height:100%;object-fit:contain; }
+.research-gallery figcaption,.research-plots figcaption { display:flex;flex-direction:column;gap:.45rem;padding:1rem 0; }
+.research-gallery figcaption span,.research-plots figcaption span { color:#a9b8c6;font-size:.8rem;line-height:1.6; }
+.research-method { display:grid;grid-template-columns:1fr 1fr;gap:3rem; }
+.research-link { color:var(--accent); display:inline-block;margin-top:1rem; }
+@media(max-width:760px){.research-intro,.research-gallery,.research-plots,.research-method { grid-template-columns:1fr;gap:1.5rem; }.research-conditions { padding:1.2rem; }}
