@@ -459,6 +459,8 @@ footer p { margin: 0; }
 .research-contour-gallery figure { margin:0;min-width:0; }
 .research-contour-gallery .image-button { width:100%;height:auto;display:block;background:#fff; }
 .research-contour-gallery .image-button img { width:100%;height:auto;display:block;object-fit:contain; }
+.research-section .image-button:hover img,
+.research-section .image-button:focus-visible img { transform:none;filter:none; }
 .research-contour-gallery figcaption,.research-pressure-view figcaption { padding:1rem 0; }
 .research-contour-gallery figcaption strong,.research-pressure-view figcaption strong { font-size:1.1rem; }
 .research-contour-gallery figcaption p,.research-pressure-view figcaption p { color:#bac4cf;line-height:1.75;margin:.6rem 0;max-width:95ch; }
@@ -472,6 +474,8 @@ footer p { margin: 0; }
 @media(max-width:760px){.research-pressure-view { grid-template-columns:1fr;gap:.5rem; }}
 /* Personal background alongside the engineering work. */
 .about-story {
+  grid-column: 1 / -1;
+  grid-row: 2;
   max-width: 78ch;
   margin: 2rem 0 3rem;
   padding-left: 1.5rem;
@@ -479,3 +483,10 @@ footer p { margin: 0; }
 }
 .about-story h3 { margin: 0 0 1rem; font-size: 1.3rem; }
 .about-story p { color: #bac4cf; line-height: 1.8; margin: .8rem 0; }
+.about-section { row-gap:2.5rem; }
+.about-section > .capability-grid { grid-column:2;grid-row:1; }
+@media(max-width:1000px) {
+  .about-section { grid-template-columns:1fr; }
+  .about-section > .about-story,
+  .about-section > .capability-grid { grid-column:1;grid-row:auto; }
+}
