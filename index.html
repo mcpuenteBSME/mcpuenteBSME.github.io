@@ -78,6 +78,28 @@
           <h2 id="research-title">Understanding flow at Mach 6.</h2>
           <p>Numerical Evaluation of Surface Imperfections in Hypersonic Turbulent Boundary Layers</p>
         </div>
+        <details class="research-disclosure">
+          <summary class="research-cover">
+            <div class="research-cover-image">
+              <img width="3120" height="960" src="assets/research-mach-contours.png" alt="Mach 6 contour image from a flat-plate flow simulation" loading="lazy" />
+            </div>
+            <div class="research-cover-copy">
+              <p class="section-index">Mach 6 / Flat-plate baseline</p>
+              <h3>Explore the flow and the study behind it.</h3>
+              <p>Open the case study for the contour views, pressure field, post-processing plots, and current research direction.</p>
+              <span class="research-cover-action">
+                <span class="research-cover-open">Explore the study</span>
+                <span class="research-cover-close">Close the study</span>
+                <span class="research-cover-icon" aria-hidden="true">+</span>
+              </span>
+            </div>
+          </summary>
+          <div class="research-expanded">
+            <div class="research-objective" aria-labelledby="research-objective-title">
+              <p class="section-index">Objective / Aerospace fluid mechanics</p>
+              <h3 id="research-objective-title">Build a baseline before adding a surface imperfection.</h3>
+              <p>With computational fluid dynamics (CFD), I’m modeling Mach 6 air flowing over a flat plate. The URANS method (unsteady Reynolds-averaged Navier–Stokes) gives me a way to study the changing mean flow while modeling turbulent effects. I’m examining boundary-layer growth and how velocity, pressure, and gas temperature vary near the surface. These fluid-mechanics patterns connect to aerospace questions about skin-friction drag, aerodynamic heating, and pressure loading. Next, I plan to add a rectangular cavity and compare its flow with this flat-plate baseline.</p>
+            </div>
         <div class="research-intro reveal">
           <div>
             <div class="project-meta"><span>UTSA · Mechanical Engineering</span><span>Work in progress</span></div>
@@ -100,9 +122,9 @@
             <p>At hypersonic speeds, understanding these effects helps engineers evaluate efficiency, surface loads, and thermal-protection requirements. Transition to turbulent flow can substantially increase heat transfer to a vehicle’s surface.</p>
           </div>
           <div>
-            <h3>The purpose of my ongoing study.</h3>
-            <p>I’m developing a Mach 6 flat-plate baseline to study boundary-layer growth, wall friction, and pressure changes over a simple surface. My next objective is a rectangular-cavity simulation, using that baseline to investigate how a surface imperfection changes the flow, including possible separation and recirculation.</p>
-            <p>This work is helping me connect computational results to the aerospace questions behind them: how surface features influence drag, pressure loading, and the flow conditions relevant to heating. The current adiabatic case assumes no heat transfer through the wall; it provides a foundation for understanding the flow rather than a prediction of heat entering an actual vehicle.</p>
+            <h3>Planned next case: rectangular-cavity flow.</h3>
+            <p>The next step is to compare a Mach 6 cavity simulation with this flat-plate baseline. That comparison will help me examine how a surface feature may change local pressure and flow structure, including possible separation or recirculation.</p>
+            <p>The current adiabatic case provides a flow baseline; it does not predict heat entering an actual vehicle surface.</p>
           </div>
         </div>
         <div class="study-heading reveal" id="research-contours">
@@ -140,7 +162,7 @@
         </figure>
         <div class="research-method reveal">
           <div><h3>From flow fields to useful quantities.</h3><p>The post-processing workflow groups exported data into wall-normal profiles, estimates edge conditions, and uses a near-wall velocity fit with Sutherland-law viscosity to estimate wall shear. The resulting plots help me examine boundary-layer growth, local skin friction, and velocity profiles in wall units.</p></div>
-          <div><h3>Current progress &amp; next questions</h3><p>The current thickness plot shows growth downstream. I’m using the skin-friction and velocity-profile plots to examine how the solution changes along the plate. My next objective is to develop a rectangular-cavity simulation, using this Mach 6 flat-plate case to guide the setup and provide a baseline for examining how the cavity changes the flow.</p></div>
+          <div><h3>Current progress &amp; next questions</h3><p>The preliminary thickness plot shows downstream growth. I’m reviewing the skin-friction and velocity-profile plots to understand how the flow changes along the plate before using this case to guide the cavity setup.</p></div>
         </div>
         <p class="scope-note reveal"><strong>Preliminary analysis:</strong> These are current simulation and post-processing outputs from an ongoing study. Numerical verification and comparison with reference results remain part of the work.</p>
         <div class="research-plots reveal">
@@ -148,6 +170,8 @@
           <figure><button class="image-button" type="button" data-image="assets/research-figure-4.png" data-caption="Estimated Cᶠ versus streamwise position — preliminary post-processing"><img src="assets/research-figure-4.png" alt="Estimated Cᶠ versus streamwise position" loading="lazy" /></button><figcaption><strong>Local skin friction</strong><span>Estimated Cᶠ versus streamwise position · Select to enlarge</span></figcaption></figure>
           <figure><button class="image-button" type="button" data-image="assets/research-figure-8.png" data-caption="u⁺ versus y⁺ at selected streamwise stations — preliminary post-processing"><img src="assets/research-figure-8.png" alt="u⁺ versus y⁺ at selected streamwise stations" loading="lazy" /></button><figcaption><strong>Velocity in wall units</strong><span>u⁺ versus y⁺ at selected streamwise stations · Select to enlarge</span></figcaption></figure>
         </div>
+          </div>
+        </details>
       </section>
 
       <section class="section work-section" id="work" aria-labelledby="work-title">
